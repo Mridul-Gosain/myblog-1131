@@ -1,0 +1,54 @@
+{{> header }}
+{{> navigation }}
+    
+<style>
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
+
+    <div id="layoutSidenav">
+      {{> sidebar }}
+      <div id="layoutSidenav_content">
+        <main>
+          <div class="container-fluid px-4">
+            <ol class="breadcrumb mb-4">
+              <!-- <li class="breadcrumb-item active"><a href="/user/newpost">New Post</a></li> -->
+            </ol>
+
+            <h5><a href="/user/newpost">New Post</a></h5>
+
+            <div class="row">
+              <div class="col-md-12">
+                
+
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Title</th>
+                      <th>Category</th>
+                      <td>Date</td>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {{#each posts}}
+                    <tr>
+                      <td>{{ this.title }}</td>
+                      <td>{{ this.category }}</td>
+                      <td>{{ this.date }}</td>
+                      <td>
+                        <a href="/editPost?id={{this._id}}">Edit</a>&nbsp;&nbsp;&nbsp;
+                        <a onclick="return confirm('Are you sure?');" href="/deletePost?id={{this._id}}">Delete</a>
+                      </td>
+                    </tr>
+                    {{/each}}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </main>
+
+{{> footer}}

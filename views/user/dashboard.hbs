@@ -1,0 +1,66 @@
+{{> header }}
+{{> navigation }}
+    
+
+    <div id="layoutSidenav">
+      {{> sidebar }}
+      <div id="layoutSidenav_content">
+        <main>
+          <div class="container-fluid px-4">
+            <h1 class="mt-4">Dashboard</h1>
+            <ol class="breadcrumb mb-4">
+              <li class="breadcrumb-item active">Wellcome! {{ user.first_name }} {{ user.last_name }}</li>
+            </ol>
+            <div class="row">
+              <div class="col-md-12">
+                <table class="table table-bordered table-bordered ">
+                  <thead>
+                    <tr>
+                      <th>Email</th>
+                      <td>{{ user.email }}</td>
+                    </tr>
+                    <tr>
+                      <th>Phone number</th>
+                      <td>{{ user.phone_number }}</td>
+                    </tr>
+                    <tr>
+                      <th>Company</th>
+                      <td>{{ user.company_name }}</td>
+                    </tr>
+                    <tr>
+                      <th>Street address</th>
+                      <td>{{ user.street_address }}</td>
+                    </tr>
+                    <tr>
+                      <th>Street address 2</th>
+                      <td>{{ user.street_address2 }}</td>
+                    </tr>
+                    <tr>
+                      <th>City</th>
+                      <td>{{ user.city }}</td>
+                    </tr>
+                    <tr>
+                      <th>Postcode</th>
+                      <td>{{ user.postcode }}</td>
+                    </tr>
+                    <tr>
+                      <th>Country</th>
+                      <td>{{ user.country }}</td>
+                    </tr>
+                    <tr>
+                      <th>Tax ID</th>
+                      <td>{{ user.tax_id }}</td>
+                    </tr>
+                    <tr>
+                      <th>Username</th>
+                      <td>{{ user.username }}</td>
+                    </tr>
+                  </thead>
+                </table>
+                <pre>{{ posts }}</pre>
+              </div>
+            </div>
+          </div>
+        </main>
+
+{{> footer}}
