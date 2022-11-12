@@ -45,7 +45,6 @@ app.use(
     secret: "blog-1016",
     resave: false,
     saveUninitialized: false,
-    store: store,
     resave: true,
   })
 );
