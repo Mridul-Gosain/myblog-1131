@@ -29,7 +29,7 @@ const bodyParser = require("body-parser");
 const session = require("express-session");
 const MongoDBStore = require("connect-mongodb-session")(session);
 const store = new MongoDBStore({
-  uri: "mongodb://localhost:27017/my-blog729",
+  uri: "mongodb+srv://root:root@cluster0.gbkozmo.mongodb.net/?retryWrites=true&w=majority",
   collection: "mySessions",
 });
 
